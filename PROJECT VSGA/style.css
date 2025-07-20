@@ -1,0 +1,136 @@
+/*
+File: style.css
+Deskripsi: File ini mengatur semua gaya visual untuk website.
+Palet Warna: Off-White (#F5F1E9), Light Mint (#81D8D0), Medium Teal (#1B8B8F), Dark Teal (#122C34)
+*/
+
+/* --- Global & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F5F1E9; /* DIUBAH: Latar belakang utama - Off-White */
+    color: #122C34;          /* DIUBAH: Warna teks utama - Dark Teal */
+    line-height: 1.6;
+}
+
+/* --- [BARU] Kontainer Utama --- */
+/* Pembungkus utama untuk semua konten agar berada di tengah dengan bayangan */
+.main-container {
+    max-width: 1200px;
+    margin: 25px auto;
+    background-color: #FFFFFF; /* Kontainer utama - Putih Bersih */
+    border: 1px solid #e0dcd1;
+    box-shadow: 0 4px 15px rgba(18, 44, 52, 0.08); /* Shadow halus */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* --- [BARU] Pembungkus Konten --- */
+/* Mengatur layout sidebar dan konten utama secara berdampingan */
+.content-wrapper {
+    display: flex;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 22%;              /* DIUBAH: Lebar relatif */
+    min-width: 220px;
+    padding: 25px;
+    background-color: #FFFFFF; /* DIUBAH: Latar putih, bukan gelap */
+    border-right: 1px solid #e0dcd1; /* DIUBAH: Garis pemisah kanan */
+    /* position: fixed dan height: 100vh dihapus */
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav ul li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #122C34;         /* DIUBAH: Warna teks Dark Teal */
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.side-nav ul li a:hover {
+    background-color: #1B8B8F; /* DIUBAH: Aksen Medium Teal */
+    color: #FFFFFF;
+}
+
+.side-nav .divider {
+    height: 1px;
+    margin: 15px 0;
+    padding: 0;
+    background-color: #e0dcd1; /* DIUBAH: Warna border */
+}
+
+/* --- Main Content Styling --- */
+.main-content {
+    width: 78%;      /* DIUBAH: Lebar relatif */
+    padding: 25px;
+    /* margin-left dihapus */
+}
+
+.main-content h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #122C34;
+    margin-bottom: 8px;
+}
+
+.main-content p {
+    font-size: 1em;
+    color: #5a686c;
+    margin-bottom: 25px;
+}
+
+/* === [DISESUAIKAN] Gaya Halaman Galeri Klien === */
+.client-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.client-card {
+    border: 1px solid #e0dcd1;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fcfbf8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(18, 44, 52, 0.1);
+}
+
+.client-card-image-wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.client-card img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.client-card h4 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #122C34;
+}
